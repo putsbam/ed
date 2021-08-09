@@ -1,11 +1,11 @@
 package fila;
 
-public class Fila {
+public class FilaIneficiente {
     private int[] Data;
     public int Head;
     public int Tail;
 
-    public Fila(int tam) {
+    public FilaIneficiente(int tam) {
         this.Data = new int[tam];
         this.Head = this.Tail = -1;
     }
@@ -19,8 +19,7 @@ public class Fila {
     }
 
     public boolean QueueFull() {
-        if ((this.Tail == this.Data.length-1 && this.Head == 0) || 
-            (this.Tail == (this.Head -1) % (this.Data.length - 1))) {
+        if (this.Tail == this.Data.length-1) {
             return true;
         } else {
             return false;
@@ -34,11 +33,7 @@ public class Fila {
         if (this.QueueEmpty()) {
             this.Tail = this.Head = 0;
         } else {
-            if (this.Tail == this.Data.length-1 && this.Head != 0) { //Contorno circular
-                this.Tail = 0;
-            } else {
-                this.Tail++; //Caso normal
-            }
+            this.Tail++; //Caso normal
         }
         this.Data[this.Tail] = dado;
     }
@@ -50,10 +45,11 @@ public class Fila {
         int dado = this.Data[this.Head];
         if (this.Tail == this.Head) { //Caso de um elemento único
             this.Tail = this.Head = -1;
-        } else if (this.Head == this.Data.length-1) { //Contorno circular
-            this.Head = 0;
         } else {
-            this.Head++;
+            for (int i = this.Head; i <= this.Tail-1; i++) {
+                this.Data[i] = this.Data[i+1];
+            }
+            this.Tail--;
         }
         return dado;
     }
