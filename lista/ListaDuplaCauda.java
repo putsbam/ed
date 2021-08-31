@@ -2,8 +2,9 @@ package lista;
 
 public class ListaDuplaCauda<T> extends ListaSimplesCauda<T> {
 
-    public void ListaDuplaCauda() {
-        super.ListaSimplesCauda();
+    public ListaDuplaCauda() {
+        this.frente = null;
+        this.fundo = null;
     }
 
     public void insereInicio(int chave, T dados) {

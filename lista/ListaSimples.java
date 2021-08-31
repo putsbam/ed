@@ -4,7 +4,7 @@ public class ListaSimples<T> {
 
     protected Elemento<T> frente;
     
-    public void ListaSimples() {
+    public ListaSimples() {
         this.frente = null;
     }
 

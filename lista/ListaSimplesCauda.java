@@ -4,7 +4,7 @@ public class ListaSimplesCauda<T> extends ListaSimples<T> {
     
     protected Elemento<T> fundo;
 
-    public void ListaSimplesCauda() {
+    public ListaSimplesCauda() {
         this.frente = null;
         this.fundo = null;
     }
