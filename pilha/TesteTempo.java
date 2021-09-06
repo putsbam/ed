@@ -27,6 +27,8 @@ public class TesteTempo {
             pilha2.Push(pilha1.Pop());
             pilha2.Push(pilha1.Pop());
             pilha2.Push(pilha1.Pop());
+            pilha2.Push(pilha1.Pop());
+            pilha2.Push(pilha1.Pop());
 
         long finalTime2 = System.currentTimeMillis();
 

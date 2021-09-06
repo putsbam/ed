@@ -53,11 +53,9 @@ public class Pilha {
             this.Topo = 0;
             throw new Exception("Pilha vazia");
         } else {
-            int a  = this.Dados[this.Topo-1];
-            for (int i=0;i<this.Topo;i++){
-                this.Dados[this.Topo-(1+i)] = 0;
-                this.Topo -= 1;
-            }
+            this.Topo -= 1;
+            int a  = this.Dados[this.Topo];
+            this.Dados[this.Topo] = 0;
             return a;
         }
     }
