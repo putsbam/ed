@@ -11,7 +11,6 @@ public class Pilha {
         }
     }
 
-
     // EDITADO A PARTIR DAQUI
 
     /*
@@ -42,34 +41,12 @@ public class Pilha {
         }
      */
 
-    // Os métodos Pop(), Push(), StackEmpty() e a classe Pilha foram corrigidos para funcionar a Q3 e outras
+    // Os métodos Pop(), Push(), StackEmpty() e a classe Pilha foram alterados e/ou criados para melhor funcionamento
 
     public Pilha(int tam) {
         this.Dados = new int[tam];
         this.Topo = 0;
     }
-
-    public int Push(int dado) throws Exception {
-        if (this.StackFull()){
-            throw new Exception("Pilha cheia");
-        } else {
-            this.Dados[this.Topo] = dado;
-            this.Topo += 1;
-            return this.Dados[this.Topo-1];
-        }
-    }
-
-    public boolean StackEmpty() {
-        if (this.Topo == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    // LISTA 04
-
-    // Q.3
 
     public int Pop() throws Exception {
         if (this.StackEmpty()) {
@@ -85,6 +62,15 @@ public class Pilha {
         }
     }
 
+    public boolean StackEmpty() {
+        if (this.Topo == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // LISTA 04
 
     // Q.2
 
@@ -93,6 +79,18 @@ public class Pilha {
             return true;
         } else {
             return false;
+        }
+    }
+
+    // Q.3
+
+    public int Push(int dado) throws Exception {
+        if (this.StackFull()){
+            throw new Exception("Pilha cheia");
+        } else {
+            this.Dados[this.Topo] = dado;
+            this.Topo += 1;
+            return this.Dados[this.Topo-1];
         }
     }
 }
