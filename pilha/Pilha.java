@@ -41,7 +41,7 @@ public class Pilha {
         }
      */
 
-    // Os métodos Pop(), Push() e a classe Pilha foram alterados e/ou criados para melhor funcionamento
+    // Os métodos Pop(), Push() e a classe Pilha foram alterados para melhor funcionamento
 
     public Pilha(int tam) {
         this.Dados = new int[tam];
