@@ -11,14 +11,14 @@ public class TesteArranjo {
 
         Scanner scanned = new Scanner(System.in);
 
-		Arranjo<String> arr1 = new Arranjo<String>(5);
+	Arranjo<String> arr1 = new Arranjo<String>(5);
 		
-		arr1.Set(0,"a");
+	arr1.Set(0,"a");
         arr1.Set(1,"b");
         System.out.println(arr1.Get(1));
         arr1.Set(2,"c");
         arr1.Imprime();
-		arr1.Set(3,"d");
+	arr1.Set(3,"d");
         arr1.Imprime();
 
         // Begin questao 3
